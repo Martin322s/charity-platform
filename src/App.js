@@ -2,7 +2,7 @@ import "./App.css";
 import Tags from "./Tags";
 
 function App() {
-    const tags = ["boomdev", "task", "tags", "react"];
+    const tags = ["boomdotdev", "task", "tags", "react"];
 
     return (
         <div className="App">
