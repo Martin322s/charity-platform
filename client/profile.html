@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Manager - Profile</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f9;
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            background-color: #2c3e50;
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            color: white;
+            position: fixed;
+            height: 100%;
+        }
+
+        .sidebar h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar nav a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .sidebar nav a:hover {
+            background-color: #34495e;
+        }
+
+        .sidebar nav a.active {
+            background-color: #1abc9c;
+        }
+
+        .sidebar footer {
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .main-content {
+            margin-left: 280px;
+            flex: 1;
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        .header {
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            color: #333;
+        }
+
+        .section {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            font-size: 24px;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .section .item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .section .item:last-child {
+            border-bottom: none;
+        }
+
+        .section .item span {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .profile-picture {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-picture img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 2px solid #ddd;
+        }
+
+        .profile-picture input {
+            display: none;
+        }
+
+        .profile-picture label {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .profile-picture label:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #2c3e50;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left: 250px;
+        }
+
+        @media (max-width: 900px) {
+            .sidebar {
+                width: 200px;
+            }
+
+            .main-content {
+                margin-left: 200px;
+            }
+
+            footer {
+                left: 200px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
+            footer {
+                left: 0;
+                width: 100%;
+                position: relative;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <div>
+            <h2>Finance Manager</h2>
+            <nav>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="transactions.html">Transactions</a>
+                <a href="budget.html">Budget</a>
+                <a href="savings.html">Savings</a>
+                <a href="settings.html">Settings</a>
+                <a href="profile.html" class="active">Profile</a>
+                <a href="#logout">Logout</a>
+            </nav>
+        </div>
+        <footer>
+            &copy; 2024 Finance Manager
+        </footer>
+    </div>
+
+    <div class="main-content">
+        <div class="header">
+            <h1>Profile</h1>
+        </div>
+
+        <section class="section">
+            <h2>Profile Picture</h2>
+            <div class="profile-picture">
+                <img src="profile-pic.jpg" alt="Profile Picture">
+                <input type="file" id="profile-pic-upload" accept="image/*">
+                <label for="profile-pic-upload">Upload New Picture</label>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Profile Information</h2>
+            <div class="item">
+                <span>Name</span>
+                <span class="amount">John Doe</span>
+            </div>
+            <div class="item">
+                <span>Email</span>
+                <span class="amount">john.doe@example.com</span>
+            </div>
+            <div class="item">
+                <span>Phone Number</span>
+                <span class="amount">+1 234 567 890</span>
+            </div>
+            <div class="item">
+                <span>Address</span>
+                <span class="amount">1234 Elm Street, Springfield, USA</span>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Account Details</h2>
+            <div class="item">
+                <span>Account Creation Date</span>
+                <span class="amount">01/01/2023</span>
+            </div>
+            <div class="item">
+                <span>Last Login</span>
+                <span class="amount">12/15/2024</span>
+            </div>
+            <div class="item">
+                <span>Subscription Plan</span>
+                <span class="amount">Premium</span>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>

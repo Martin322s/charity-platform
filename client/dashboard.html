@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Manager - Dashboard</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            background-color: #343a40;
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            color: white;
+            position: fixed;
+            height: 100%;
+            margin-right: 50px;
+        }
+
+        .sidebar h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar nav a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            display: block;
+        }
+
+        .sidebar nav a:hover {
+            background-color: #495057;
+        }
+
+        .sidebar nav a.active {
+            background-color: #007bff;
+        }
+
+        .sidebar footer {
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .main-content {
+            margin-left: 250px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 80px;
+            overflow-y: auto;
+        }
+
+        .header {
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            color: #333;
+        }
+
+        .section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            font-size: 24px;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .section .item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .section .item:last-child {
+            border-bottom: none;
+        }
+
+        .section .item span {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .section .item span.value {
+            color: #333;
+        }
+
+        .section .progress-bar {
+            background-color: #f0f2f5;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .section .progress-bar .progress {
+            height: 10px;
+            background-color: #007bff;
+            border-radius: 5px;
+            transition: width 0.3s;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #343a40;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left: 250px;
+        }
+
+        @media (max-width: 900px) {
+            .sidebar {
+                width: 200px;
+            }
+
+            .main-content {
+                margin-left: 200px;
+            }
+
+            footer {
+                left: 200px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
+            footer {
+                left: 0;
+                width: 100%;
+                position: relative;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <div>
+            <h2>Finance Manager</h2>
+            <nav>
+                <a href="#overview" class="active">Overview</a>
+                <a href="#transactions">Transactions</a>
+                <a href="#budget">Budget</a>
+                <a href="#savings">Savings</a>
+                <a href="#settings">Settings</a>
+                <a href="#logout">Logout</a>
+            </nav>
+        </div>
+        <footer>
+            &copy; 2024 Finance Manager
+        </footer>
+    </div>
+
+    <div class="main-content">
+        <div class="header">
+            <h1>Welcome, [User Name]</h1>
+        </div>
+
+        <section class="section" id="overview">
+            <h2>Overview</h2>
+            <p>Your financial overview for the current month:</p>
+            <div class="item">
+                <span>Total Balance</span>
+                <span class="value">$10,000</span>
+            </div>
+            <div class="item">
+                <span>Monthly Income</span>
+                <span class="value">$3,500</span>
+            </div>
+            <div class="item">
+                <span>Monthly Expenses</span>
+                <span class="value">$2,000</span>
+            </div>
+        </section>
+
+        <section class="section" id="transactions">
+            <h2>Recent Transactions</h2>
+            <div class="item">
+                <span>Groceries</span>
+                <span class="value">-$150</span>
+            </div>
+            <div class="item">
+                <span>Rent</span>
+                <span class="value">-$1,000</span>
+            </div>
+            <div class="item">
+                <span>Utilities</span>
+                <span class="value">-$200</span>
+            </div>
+            <div class="item">
+                <span>Dining Out</span>
+                <span class="value">-$100</span>
+            </div>
+        </section>
+
+        <section class="section" id="budget">
+            <h2>Budget Summary</h2>
+            <div class="item">
+                <span>Groceries</span>
+                <span class="value">$300 / $400</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress" style="width: 75%;"></div>
+            </div>
+            <div class="item">
+                <span>Rent</span>
+                <span class="value">$1,000 / $1,000</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress" style="width: 100%;"></div>
+            </div>
+            <div class="item">
+                <span>Utilities</span>
+                <span class="value">$200 / $250</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress" style="width: 80%;"></div>
+            </div>
+            <div class="item">
+                <span>Dining Out</span>
+                <span class="value">$150 / $200</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress" style="width: 75%;"></div>
+            </div>
+        </section>
+
+        <section class="section" id="savings">
+            <h2>Savings Goals</h2>
+            <div class="item">
+                <span>Emergency Fund</span>
+                <span class="value">$1,000 / $5,000</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress" style="width: 20%;"></div>
+            </div>
+            <div class="item">
+                <span>Vacation</span>
+                <span class="value">$500 / $2,000</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress" style="width: 25%;"></div>
+            </div>
+            <div class="item">
+                <span>New Car</span>
+                <span class="value">$2,000 / $15,000</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress" style="width: 13.33%;"></div>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Manager - Settings</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f9;
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            background-color: #2c3e50;
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            color: white;
+            position: fixed;
+            height: 100%;
+        }
+
+        .sidebar h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar nav a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .sidebar nav a:hover {
+            background-color: #34495e;
+        }
+
+        .sidebar nav a.active {
+            background-color: #1abc9c;
+        }
+
+        .sidebar footer {
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .main-content {
+            margin-left: 280px;
+            flex: 1;
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        .header {
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            color: #333;
+        }
+
+        .section {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            font-size: 24px;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .section label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .section input,
+        .section select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .section button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .section button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #2c3e50;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left: 250px;
+        }
+
+        @media (max-width: 900px) {
+            .sidebar {
+                width: 200px;
+            }
+
+            .main-content {
+                margin-left: 200px;
+            }
+
+            footer {
+                left: 200px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
+            footer {
+                left: 0;
+                width: 100%;
+                position: relative;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <div>
+            <h2>Finance Manager</h2>
+            <nav>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="transactions.html">Transactions</a>
+                <a href="budget.html">Budget</a>
+                <a href="savings.html">Savings</a>
+                <a href="settings.html" class="active">Settings</a>
+                <a href="#logout">Logout</a>
+            </nav>
+        </div>
+        <footer>
+            &copy; 2024 Finance Manager
+        </footer>
+    </div>
+
+    <div class="main-content">
+        <div class="header">
+            <h1>Settings</h1>
+        </div>
+
+        <section class="section">
+            <h2>Profile Settings</h2>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" placeholder="Enter your address">
+
+            <button>Save Changes</button>
+        </section>
+
+        <section class="section">
+            <h2>Security Settings</h2>
+            <label for="password">Change Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter new password">
+
+            <label for="twofa">Two-Factor Authentication</label>
+            <select id="twofa" name="twofa">
+                <option value="enabled">Enabled</option>
+                <option value="disabled">Disabled</option>
+            </select>
+
+            <button>Save Changes</button>
+        </section>
+
+        <section class="section">
+            <h2>Notification Preferences</h2>
+            <label for="email-notifications">Email Notifications</label>
+            <select id="email-notifications" name="email-notifications">
+                <option value="enabled">Enabled</option>
+                <option value="disabled">Disabled</option>
+            </select>
+
+            <label for="sms-notifications">SMS Notifications</label>
+            <select id="sms-notifications" name="sms-notifications">
+                <option value="enabled">Enabled</option>
+                <option value="disabled">Disabled</option>
+            </select>
+
+            <label for="push-notifications">Push Notifications</label>
+            <select id="push-notifications" name="push-notifications">
+                <option value="enabled">Enabled</option>
+                <option value="disabled">Disabled</option>
+            </select>
+
+            <button>Save Changes</button>
+        </section>
+
+        <section class="section">
+            <h2>Account Management</h2>
+            <button style="background-color: red;">Delete Account</button>
+        </section>
+    </div>
+
+</body>
+
+</html>
