@@ -5,6 +5,7 @@ import { ServicesPageComponent } from './services/services-page/services-page.co
 import { CausesPageComponent } from './causes/causes-page/causes-page.component';
 import { CauseDetailsPageComponent } from './cause-details/cause-details-page/cause-details-page.component';
 import { ContactsPageComponent } from './contacts/contacts-page/contacts-page.component';
+import { EventsPageComponent } from './events/events-page/events-page.component';
 
 export const routes: Routes = [
 	{ path: '', component: HomeComponent },
@@ -12,5 +13,6 @@ export const routes: Routes = [
 	{ path: 'services', component: ServicesPageComponent },
 	{ path: 'causes', component: CausesPageComponent },
 	{ path: 'cause-details/:causeId', component: CauseDetailsPageComponent },
-	{ path: 'contacts', component: ContactsPageComponent }
+	{ path: 'contacts', component: ContactsPageComponent },
+	{ path: 'events', component: EventsPageComponent },
 ];
