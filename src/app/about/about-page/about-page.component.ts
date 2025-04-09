@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { AboutHeaderComponent } from "../about-header/about-header.component";
+import { HomeAboutSectionComponent } from "../../home-page/home-about-section/home-about-section.component";
 
 @Component({
   selector: 'app-about-page',
-  imports: [AboutHeaderComponent],
+  imports: [AboutHeaderComponent, HomeAboutSectionComponent],
   templateUrl: './about-page.component.html',
   styleUrl: './about-page.component.css'
 })
