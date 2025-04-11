@@ -7,6 +7,9 @@ import { CauseDetailsPageComponent } from './cause-details/cause-details-page/ca
 import { ContactsPageComponent } from './contacts/contacts-page/contacts-page.component';
 import { EventsPageComponent } from './events/events-page/events-page.component';
 import { EventDetailsPageComponent } from './event-details/event-details-page/event-details-page.component';
+import { SharePageComponent } from './share/share-page/share-page.component';
+import { ProfilePageComponent } from './profile/profile-page/profile-page.component';
+import { LoginPageComponent } from './auth/login-page/login-page.component';
 
 export const routes: Routes = [
 	{ path: '', component: HomeComponent },
@@ -17,4 +20,7 @@ export const routes: Routes = [
 	{ path: 'contacts', component: ContactsPageComponent },
 	{ path: 'events', component: EventsPageComponent },
 	{ path: 'event-details/:eventId', component: EventDetailsPageComponent },
+	{ path: 'share', component: SharePageComponent },
+	{ path: 'profile', component: ProfilePageComponent },
+	{ path: 'login', component: LoginPageComponent },
 ];
