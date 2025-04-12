@@ -1,0 +1,97 @@
+<div class="shareform_form_section" id="shareform_donation_form">
+	<form>
+		<div class="shareform_form_group">
+			<label class="shareform_label">Име на каузата<span class="shareform_required">*</span></label>
+			<input type="text" class="shareform_input" placeholder="Въведете име на каузата" required>
+		</div>
+
+		<div class="shareform_form_group">
+			<label class="shareform_label">Организация<span class="shareform_required">*</span></label>
+			<input type="text" class="shareform_input" placeholder="Име на организацията" required>
+		</div>
+
+		<div class="shareform_form_group">
+			<label class="shareform_label">Категория<span class="shareform_required">*</span></label>
+			<select class="shareform_select" required>
+				<option value="" disabled selected>Изберете категория</option>
+				<option value="reforestation">Залесяване</option>
+				<option value="water">Чиста вода</option>
+				<option value="wildlife">Защита на животни</option>
+				<option value="energy">Възобновяема енергия</option>
+				<option value="waste">Управление на отпадъци</option>
+				<option value="education">Екологично образование</option>
+				<option value="other">Друго</option>
+			</select>
+		</div>
+
+		<div class="shareform_form_group">
+			<label class="shareform_label">Описание<span class="shareform_required">*</span></label>
+			<textarea class="shareform_textarea"
+				placeholder="Опишете каузата и как ще се използват събраните средства..." required></textarea>
+		</div>
+
+		<div class="shareform_inline_group">
+			<div class="shareform_form_group">
+				<label class="shareform_label">Цел за набиране<span class="shareform_required">*</span></label>
+				<input type="number" class="shareform_input" placeholder="Сума в лева" required min="1">
+			</div>
+
+			<div class="shareform_form_group">
+				<label class="shareform_label">Краен срок</label>
+				<input type="date" class="shareform_input">
+				<p class="shareform_info_text">Оставете празно ако няма краен срок</p>
+			</div>
+		</div>
+
+		<div class="shareform_form_group">
+			<label class="shareform_label">Банкова информация<span class="shareform_required">*</span></label>
+			<input type="text" class="shareform_input" placeholder="Име на титуляра" required>
+			<input type="text" class="shareform_input" placeholder="IBAN" required style="margin-top: 10px;">
+			<input type="text" class="shareform_input" placeholder="BIC" required style="margin-top: 10px;">
+			<input type="text" class="shareform_input" placeholder="Банка" required style="margin-top: 10px;">
+		</div>
+
+		<hr class="shareform_separator">
+
+		<div class="shareform_form_group">
+			<label class="shareform_label">Изображение</label>
+			<input type="file" class="shareform_input_file" id="shareform_donation_image" accept="image/*">
+			<label for="shareform_donation_image" class="shareform_file_label">
+				<i class="fas fa-upload"></i> Прикачи изображение
+			</label>
+			<div class="shareform_preview">
+				Няма избрано изображение
+			</div>
+		</div>
+
+		<div class="shareform_form_group">
+			<label class="shareform_label">Интернет страница</label>
+			<input type="url" class="shareform_input" placeholder="URL адрес на уебсайт с допълнителна информация">
+		</div>
+
+		<div class="shareform_form_group">
+			<label class="shareform_label">Контакти за връзка<span class="shareform_required">*</span></label>
+			<input type="text" class="shareform_input" placeholder="Име на контакт" required>
+			<input type="email" class="shareform_input" placeholder="Имейл" required style="margin-top: 10px;">
+			<input type="tel" class="shareform_input" placeholder="Телефон" style="margin-top: 10px;">
+		</div>
+
+		<div class="shareform_form_group">
+			<label class="shareform_label">Документи за легитимност</label>
+			<input type="file" class="shareform_input_file" id="shareform_documents" multiple>
+			<label for="shareform_documents" class="shareform_file_label">
+				<i class="fas fa-file"></i> Прикачи документи (регистрация, лиценз и др.)
+			</label>
+			<p class="shareform_info_text">Може да прикачите повече от един документ</p>
+		</div>
+
+		<div class="shareform_actions">
+			<button type="button" class="shareform_btn shareform_btn_secondary">
+				<i class="fas fa-undo"></i> Изчисти
+			</button>
+			<button type="submit" class="shareform_btn shareform_btn_primary">
+				<i class="fas fa-paper-plane"></i> Изпрати
+			</button>
+		</div>
+	</form>
+</div>
