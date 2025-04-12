@@ -1,0 +1,83 @@
+<div class="shareform_form_section shareform_form_active" id="shareform_event_form">
+	<form>
+		<div class="shareform_form_group">
+			<label class="shareform_label">Име на събитието<span class="shareform_required">*</span></label>
+			<input type="text" class="shareform_input" placeholder="Въведете име на събитието" required>
+		</div>
+
+		<div class="shareform_inline_group">
+			<div class="shareform_form_group">
+				<label class="shareform_label">Дата<span class="shareform_required">*</span></label>
+				<input type="date" class="shareform_input" required>
+			</div>
+
+			<div class="shareform_form_group">
+				<label class="shareform_label">Час<span class="shareform_required">*</span></label>
+				<input type="time" class="shareform_input" required>
+			</div>
+		</div>
+
+		<div class="shareform_form_group">
+			<label class="shareform_label">Местоположение<span class="shareform_required">*</span></label>
+			<input type="text" class="shareform_input" placeholder="Адрес на събитието" required>
+		</div>
+
+		<div class="shareform_form_group">
+			<label class="shareform_label">Категория<span class="shareform_required">*</span></label>
+			<select class="shareform_select" required>
+				<option value="" disabled selected>Изберете категория</option>
+				<option value="cleanup">Почистване</option>
+				<option value="planting">Засаждане</option>
+				<option value="education">Образование</option>
+				<option value="recycling">Рециклиране</option>
+				<option value="conservation">Консервация</option>
+				<option value="other">Друго</option>
+			</select>
+		</div>
+
+		<div class="shareform_form_group">
+			<label class="shareform_label">Описание<span class="shareform_required">*</span></label>
+			<textarea class="shareform_textarea" placeholder="Опишете събитието..." required></textarea>
+		</div>
+
+		<div class="shareform_form_group">
+			<label class="shareform_label">Максимален брой участници</label>
+			<input type="number" class="shareform_input" placeholder="Оставете празно ако няма лимит" min="1">
+			<p class="shareform_info_text">Оставете празно ако няма ограничение в броя участници</p>
+		</div>
+
+		<hr class="shareform_separator">
+
+		<div class="shareform_form_group">
+			<label class="shareform_label">Изображение</label>
+			<input type="file" class="shareform_input_file" id="shareform_event_image" accept="image/*">
+			<label for="shareform_event_image" class="shareform_file_label">
+				<i class="fas fa-upload"></i> Прикачи изображение
+			</label>
+			<div class="shareform_preview">
+				Няма избрано изображение
+			</div>
+		</div>
+
+		<div class="shareform_form_group">
+			<label class="shareform_label">Необходими материали/оборудване</label>
+			<textarea class="shareform_textarea" placeholder="Опишете какво трябва да носят участниците..."></textarea>
+		</div>
+
+		<div class="shareform_form_group">
+			<label class="shareform_label">Контакти за връзка<span class="shareform_required">*</span></label>
+			<input type="text" class="shareform_input" placeholder="Име на контакт" required>
+			<input type="email" class="shareform_input" placeholder="Имейл" required style="margin-top: 10px;">
+			<input type="tel" class="shareform_input" placeholder="Телефон" style="margin-top: 10px;">
+		</div>
+
+		<div class="shareform_actions">
+			<button type="button" class="shareform_btn shareform_btn_secondary">
+				<i class="fas fa-undo"></i> Изчисти
+			</button>
+			<button type="submit" class="shareform_btn shareform_btn_primary">
+				<i class="fas fa-paper-plane"></i> Изпрати
+			</button>
+		</div>
+	</form>
+</div>
