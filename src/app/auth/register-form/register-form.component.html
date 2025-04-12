@@ -1,0 +1,48 @@
+<form class="auth-form" id="register-form">
+	<h2 class="auth-form-title">Create Account</h2>
+
+	<div class="auth-success">
+		Registration successful! You can now login.
+	</div>
+
+	<div class="auth-input-group">
+		<label class="auth-label" for="register-name">Full Name</label>
+		<input type="text" id="register-name" class="auth-input" placeholder="John Doe" required>
+	</div>
+
+	<div class="auth-input-group">
+		<label class="auth-label" for="register-email">Email</label>
+		<input type="email" id="register-email" class="auth-input" placeholder="your@email.com" required>
+	</div>
+
+	<div class="auth-input-group">
+		<label class="auth-label" for="register-password">Password</label>
+		<input type="password" id="register-password" class="auth-input" placeholder="••••••••" required>
+		<div class="auth-password-strength">
+			<div class="auth-password-bar"></div>
+		</div>
+		<div class="auth-password-text">Password strength: Too weak</div>
+	</div>
+
+	<div class="auth-input-group">
+		<label class="auth-label" for="register-confirm">Confirm Password</label>
+		<input type="password" id="register-confirm" class="auth-input" placeholder="••••••••" required>
+	</div>
+
+	<div class="auth-remember">
+		<input type="checkbox" id="terms" class="auth-checkbox" required>
+		<label for="terms">I agree to the <a href="#" class="auth-link">Terms</a> and <a href="#"
+				class="auth-link">Privacy Policy</a></label>
+	</div>
+
+	<button type="submit" class="auth-submit">Create Account</button>
+
+	<div class="auth-separator">
+		<span>OR</span>
+	</div>
+
+	<div class="auth-social">
+		<button type="button" class="auth-social-btn">Google</button>
+		<button type="button" class="auth-social-btn">Facebook</button>
+	</div>
+</form>
