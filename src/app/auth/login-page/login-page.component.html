@@ -5,13 +5,17 @@
 
 	<div class="auth-card">
 		<div class="auth-header">
-			<div class="auth-tab active" data-form="login">Login</div>
-			<div class="auth-tab" data-form="register">Register</div>
+			<div class="auth-tab" [class.active]="activeForm === 'login'" (click)="setForm('login')">
+				Вход
+			</div>
+			<div class="auth-tab" [class.active]="activeForm === 'register'" (click)="setForm('register')">
+				Регистрация
+			</div>
 		</div>
 
 		<div class="auth-body">
-			<app-login-form />
-			<app-register-form />>
+			<app-login-form *ngIf="activeForm === 'login'"></app-login-form>
+			<app-register-form *ngIf="activeForm === 'register'"></app-register-form>
 		</div>
 	</div>
 </div>
