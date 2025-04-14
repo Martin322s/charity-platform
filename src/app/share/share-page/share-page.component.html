@@ -7,11 +7,20 @@
 
 		<div class="shareform_card">
 			<div class="shareform_tabs">
-				<div class="shareform_tab shareform_tab_active" id="shareform_event_tab">Събитие</div>
-				<div class="shareform_tab" id="shareform_donation_tab">Кауза за дарение</div>
+				<div class="shareform_tab" [class.shareform_tab_active]="activeTab === 'event'"
+					(click)="setTab('event')">
+					Събитие
+				</div>
+				<div class="shareform_tab" [class.shareform_tab_active]="activeTab === 'donation'"
+					(click)="setTab('donation')">
+					Кауза за дарение
+				</div>
 			</div>
-			<app-share-event />
-			<app-share-cause />
+
+			<div class="shareform_forms">
+				<app-share-event *ngIf="activeTab === 'event'"></app-share-event>
+				<app-share-cause *ngIf="activeTab === 'donation'"></app-share-cause>
+			</div>
 		</div>
 	</div>
 </div>
