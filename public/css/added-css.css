@@ -584,10 +584,6 @@ body {
 	padding: 30px;
 }
 
-.auth-form {
-	display: none;
-}
-
 .auth-form.active {
 	display: block;
 }
@@ -1082,10 +1078,6 @@ body {
 
 .shareform_tab:hover {
 	color: #e89718;
-}
-
-.shareform_form_section {
-	display: none;
 }
 
 .shareform_form_active {

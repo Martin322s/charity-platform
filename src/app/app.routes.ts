@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home-page/home/home.component';
 import { AboutPageComponent } from './about/about-page/about-page.component';
 import { ServicesPageComponent } from './services/services-page/services-page.component';
 import { CausesPageComponent } from './causes/causes-page/causes-page.component';
@@ -10,6 +9,7 @@ import { EventDetailsPageComponent } from './event-details/event-details-page/ev
 import { SharePageComponent } from './share/share-page/share-page.component';
 import { ProfilePageComponent } from './profile/profile-page/profile-page.component';
 import { LoginPageComponent } from './auth/login-page/login-page.component';
+import { HomeComponent } from './home-page/home/home.component';
 
 export const routes: Routes = [
 	{ path: '', component: HomeComponent },
